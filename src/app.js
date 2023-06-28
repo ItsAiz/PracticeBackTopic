@@ -20,6 +20,7 @@ mongoose.connect(process.env.MONGODB_URI || mongoDBURL).then(()=>{
 })
 
 //middlewares
+app.use(morgan("dev"))
 app.use(express.json());
 app.use(cors())
 
