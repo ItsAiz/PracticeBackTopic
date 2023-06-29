@@ -42,9 +42,9 @@ const updateTopic = async (req, res) =>{
       creationDate: creationDate
     }, {new: true})
     if(!updatedTopic){
-      return res.status(404).json({ message: 'Topic not found' })
+      return res.status(404).json({ message: 'Topic not found'})
     }
-    res.json({ message: "Topic created successfully", topic: updatedTopic})
+    res.json({ message: "Topic has been updated successfully", topic: updatedTopic})
 
   } catch (error) {
     console.error("Error creating topic", error)
